@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+:root {
+  font-size: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #f7f7f7;
+  color: #1a1a1a;
+}
+
+header,
+main,
+footer {
+  padding: 1.25rem;
+}
+
+header,
+footer {
+  background-color: #ffffff;
+}
+
+main {
+  background-color: #ffffff;
+  border: 0.0625rem solid #e6e6e6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+p {
+  margin-top: 0.75rem;
+}
+
+ul,
+ol {
+  margin-top: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+figure {
+  margin-top: 1rem;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+footer p {
+  font-size: 0.95rem;
+}
+
+/* Centered horizontal navigation (identical on all pages) */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+nav li {
+  padding: 0.25rem 0.75rem;
+  border: 0.0625rem solid #dddddd;
+  background-color: #f2f2f2;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+nav a:focus,
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Shared layout helpers */
+.page-home main,
+.page-resume main,
+.page-interests main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Page-specific styles: HOME (at least 5) */
+.page-home header {
+  border-bottom: 0.25rem solid #e7e7e7;
+}
+
+.page-home main {
+  width: 92%;
+  max-width: 70rem;
+  border-radius: 0.5rem;
+}
+
+.page-home figure {
+  max-width: 45rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-home ul {
+  background-color: #fafafa;
+  border: 0.0625rem solid #ededed;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.page-home footer {
+  text-align: center;
+}
+
+/* Page-specific styles: RESUME (fixed width layout page) */
+.page-resume main {
+  width: 48rem;
+  max-width: 95%;
+  border-radius: 0.5rem;
+}
+
+.page-resume address {
+  font-style: normal;
+  background-color: #fafafa;
+  border: 0.0625rem solid #ededed;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.page-resume section {
+  margin-top: 1rem;
+}
+
+.page-resume article {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-left: 0.25rem solid #e7e7e7;
+  background-color: #fcfcfc;
+}
+
+.page-resume ul {
+  background-color: #fbfbfb;
+  border: 0.0625rem solid #eeeeee;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+/* Page-specific styles: INTERESTS (fluid layout page) */
+.page-interests main {
+  width: 94%;
+  max-width: 72rem;
+  border-radius: 0.5rem;
+}
+
+.page-interests section {
+  margin-top: 1rem;
+}
+
+.page-interests ul {
+  background-color: #fafafa;
+  border: 0.0625rem solid #ededed;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.page-interests iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0.0625rem solid #dddddd;
+}
+
+.page-interests figure {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive adjustment using relative units */
+@media (min-width: 60rem) {
+  header,
+  main,
+  footer {
+    padding: 1.75rem;
+  }
+
+  nav ul {
+    gap: 1.25rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+}
