@@ -4,35 +4,44 @@
   font-size: 100%;
 }
 
+/* Base layout */
+
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #f7f7f7;
+  background-color: #eef5fb;
   color: #1a1a1a;
 }
 
 header,
 main,
 footer {
-  padding: 1.25rem;
+  padding: 1.5rem;
 }
 
-header,
+header {
+  background-color: #dbe9f6;
+  border-bottom: 0.25rem solid #b5d2ea;
+}
+
 footer {
-  background-color: #ffffff;
+  background-color: #dbe9f6;
+  margin-top: 2rem;
 }
 
 main {
   background-color: #ffffff;
-  border: 0.0625rem solid #e6e6e6;
+  border: 0.0625rem solid #d7e6f3;
+  border-radius: 0.5rem;
 }
+
+/* Typography */
 
 h1,
 h2,
 h3 {
   font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 600;
 }
 
 h1 {
@@ -44,12 +53,12 @@ h2 {
   font-size: 1.4rem;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  color: #245b8f;
 }
 
 h3 {
   font-size: 1.1rem;
   margin-top: 1rem;
-  margin-bottom: 0.25rem;
 }
 
 p {
@@ -62,20 +71,8 @@ ol {
   padding-left: 1.5rem;
 }
 
-figure {
-  margin-top: 1rem;
-}
+/* Navigation */
 
-figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-}
-
-footer p {
-  font-size: 0.95rem;
-}
-
-/* Centered horizontal navigation (identical on all pages) */
 nav ul {
   list-style: none;
   display: flex;
@@ -86,23 +83,37 @@ nav ul {
 }
 
 nav li {
-  padding: 0.25rem 0.75rem;
-  border: 0.0625rem solid #dddddd;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
+  border: 0.0625rem solid #bcd5ea;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.35rem;
 }
 
 nav a {
   text-decoration: none;
-  color: #1a1a1a;
+  color: #1e4f7a;
   font-weight: 600;
 }
 
-nav a:focus,
 nav a:hover {
+  color: #0d2f4f;
   text-decoration: underline;
 }
 
-/* Shared layout helpers */
+/* Images */
+
+figure {
+  margin-top: 1rem;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+}
+
+/* Shared layout width */
+
 .page-home main,
 .page-resume main,
 .page-interests main {
@@ -110,47 +121,30 @@ nav a:hover {
   margin-right: auto;
 }
 
-/* Page-specific styles: HOME (at least 5) */
-.page-home header {
-  border-bottom: 0.25rem solid #e7e7e7;
-}
+/* HOME page styles */
 
 .page-home main {
   width: 92%;
   max-width: 70rem;
-  border-radius: 0.5rem;
 }
 
-.page-home figure {
-  max-width: 45rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.page-home ul {
-  background-color: #fafafa;
-  border: 0.0625rem solid #ededed;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
+.page-home section {
+  background-color: #f5faff;
+  border: 0.0625rem solid #dcebf7;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.4rem;
 }
 
 .page-home footer {
   text-align: center;
 }
 
-/* Page-specific styles: RESUME (fixed width layout page) */
+/* RESUME page (fixed layout example) */
+
 .page-resume main {
   width: 48rem;
   max-width: 95%;
-  border-radius: 0.5rem;
-}
-
-.page-resume address {
-  font-style: normal;
-  background-color: #fafafa;
-  border: 0.0625rem solid #ededed;
-  padding: 1rem;
-  border-radius: 0.5rem;
 }
 
 .page-resume section {
@@ -160,60 +154,50 @@ nav a:hover {
 .page-resume article {
   margin-top: 1rem;
   padding: 1rem;
-  border-left: 0.25rem solid #e7e7e7;
-  background-color: #fcfcfc;
+  border-left: 0.25rem solid #a9cceb;
+  background-color: #f7fbff;
 }
 
-.page-resume ul {
-  background-color: #fbfbfb;
-  border: 0.0625rem solid #eeeeee;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
+.page-resume address {
+  background-color: #f5faff;
+  padding: 1rem;
+  border: 0.0625rem solid #dcebf7;
+  border-radius: 0.4rem;
 }
 
-/* Page-specific styles: INTERESTS (fluid layout page) */
+/* INTERESTS page (fluid layout example) */
+
 .page-interests main {
   width: 94%;
   max-width: 72rem;
-  border-radius: 0.5rem;
 }
 
 .page-interests section {
   margin-top: 1rem;
-}
-
-.page-interests ul {
-  background-color: #fafafa;
-  border: 0.0625rem solid #ededed;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
+  background-color: #f5faff;
+  border: 0.0625rem solid #dcebf7;
+  padding: 1rem;
+  border-radius: 0.4rem;
 }
 
 .page-interests iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
-  border: 0.0625rem solid #dddddd;
+  border: 0.0625rem solid #bcd5ea;
 }
 
-.page-interests figure {
-  max-width: 50rem;
-  margin-left: auto;
-  margin-right: auto;
-}
+/* Responsive adjustments */
 
-/* Responsive adjustment using relative units */
 @media (min-width: 60rem) {
+
   header,
   main,
   footer {
-    padding: 1.75rem;
-  }
-
-  nav ul {
-    gap: 1.25rem;
+    padding: 2rem;
   }
 
   h1 {
-    font-size: 2.25rem;
+    font-size: 2.3rem;
   }
+
 }
