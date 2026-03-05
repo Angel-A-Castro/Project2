@@ -21,6 +21,16 @@ footer {
 header {
   background-color: #dbe9f6;
   border-bottom: 0.25rem solid #b5d2ea;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  display: block;
+  height: 0.35rem;
+  margin-top: 1rem;
+  border-radius: 0.35rem;
+  background-color: #7fb4e0;
 }
 
 footer {
@@ -34,7 +44,8 @@ footer {
 main {
   background-color: #ffffff;
   border: 0.0625rem solid #d7e6f3;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(36, 91, 143, 0.12);
 }
 
 h1,
@@ -73,6 +84,18 @@ section + section {
   margin-top: 1.25rem;
 }
 
+/* Links in content */
+main a {
+  color: #1e4f7a;
+  text-decoration: underline;
+  text-decoration-thickness: 0.12rem;
+  text-underline-offset: 0.15rem;
+}
+
+main a:hover {
+  color: #0d2f4f;
+}
+
 /* Navigation */
 nav ul {
   list-style: none;
@@ -88,11 +111,12 @@ nav li {
   border: 0.0625rem solid #bcd5ea;
   padding: 0.4rem 0.8rem;
   border-radius: 0.35rem;
-  transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease, transform 0.2s ease;
 }
 
 nav li:hover {
   background-color: #e6f2fb;
+  transform: translateY(-0.1rem);
 }
 
 nav a {
@@ -154,6 +178,10 @@ figcaption {
   border-radius: 0.4rem;
 }
 
+.page-home h2 {
+  color: #1f5f99;
+}
+
 /* RESUME PAGE (fixed layout example) */
 .page-resume main {
   width: 48rem;
@@ -176,6 +204,10 @@ figcaption {
   border-radius: 0.25rem;
 }
 
+.page-resume h2 {
+  color: #1d4f7c;
+}
+
 /* INTERESTS PAGE (fluid layout example) */
 .page-interests main {
   width: 94%;
@@ -194,6 +226,23 @@ figcaption {
   aspect-ratio: 16 / 9;
   border: 0.0625rem solid #bcd5ea;
   border-radius: 0.25rem;
+}
+
+.page-interests h2 {
+  color: #2a6fa6;
+}
+
+/* List marker color */
+.page-home main ul li,
+.page-interests main ul li,
+.page-resume main ul li {
+  margin-top: 0.35rem;
+}
+
+.page-home main ul li::marker,
+.page-interests main ul li::marker,
+.page-resume main ul li::marker {
+  color: #245b8f;
 }
 
 /* Responsive */
